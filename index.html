@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="icon" type="image/webp" href="" id="favicon" />
+    <title>Francisco Mesa</title>
+    <script>
+      window.onload = () => {
+        const randomNum = Math.floor(Math.random() * 5) + 1;
+        document.getElementById("favicon").href = `img/${randomNum}.webp`;
+      };
+    </script>
   </head>
   <body>
-    <hi> Hola </hi>
+    <p>
+      <strong>WIP</strong>
+    </p>
   </body>
 </html>
