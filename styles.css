@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+:root {
+  --bg: #dfdfdf;
+  --ct: #0d0d0d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151515;
+    --ct: #ccc;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+*::selection {
+  background: color-mix(in srgb, var(--ct) 10%, transparent);
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  display: grid;
+  place-items: center;
+
+  color: var(--ct);
+  background: linear-gradient(
+    -45deg,
+    color-mix(in srgb, #0077b2 2.5%, transparent),
+    color-mix(in srgb, #00b25d 2.5%, transparent),
+    color-mix(in srgb, #b26000 2.5%, transparent),
+    color-mix(in srgb, #b2004b 2.5%, transparent),
+    color-mix(in srgb, #4e00b2 2.5%, transparent)
+  );
+  background-color: var(--bg);
+  background-size: 400% 400%;
+
+  animation: gradient 15s ease infinite;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+
+  width: 75%;
+  max-width: 575px;
+  height: 75%;
+
+  gap: 0.25rem;
+
+  margin-inline: 20rem;
+  padding-inline: 2rem;
+
+  border-radius: 2rem;
+
+  box-shadow: inset 0 0 1rem color-mix(in srgb, transparent 15%, transparent);
+
+  background-image: radial-gradient(
+      color-mix(in srgb, var(--ct) 10%, transparent) 0.5px,
+      transparent 0.5px
+    ),
+    radial-gradient(
+      color-mix(in srgb, var(--ct) 10%, transparent) 0.5px,
+      transparent 0.5px
+    );
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+@media (max-width: 768px) {
+  main {
+    margin-inline: 0;
+  }
+}
+
+#icon {
+  width: 2rem;
+  height: 2rem;
+
+  user-select: none;
+}
+
+h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-block: 0.25rem;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-block: 0.25rem;
+}
+
+p {
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+
+hr {
+  width: 100%;
+  height: 0.01rem;
+
+  margin-block: 0.5rem;
+
+  border: none;
+  background-color: var(--ct);
+
+  opacity: 0.15;
+}

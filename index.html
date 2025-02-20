@@ -3,18 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/webp" href="" id="favicon" />
     <title>Francisco Mesa</title>
     <script>
       window.onload = () => {
         const randomNum = Math.floor(Math.random() * 5) + 1;
         document.getElementById("favicon").href = `img/${randomNum}.webp`;
+        document.getElementById("icon").src = `img/${randomNum}.webp`;
       };
     </script>
   </head>
   <body>
-    <p>
-      <strong>WIP</strong>
-    </p>
+    <main>
+      <img id="icon" />
+      <h1>Hola, soy Francisco Mesa</h1>
+      <p>
+        Desarrollador de software. Me encanta aprender cosas nuevas y compartir
+        conocimientos.
+      </p>
+      <hr />
+    </main>
   </body>
 </html>
