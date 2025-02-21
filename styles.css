@@ -24,6 +24,11 @@
   }
 }
 
+[data-lucide] {
+  width: 16px;
+  height: 16px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -47,11 +52,11 @@ body {
   color: var(--ct);
   background: linear-gradient(
     -45deg,
-    color-mix(in srgb, #0077b2 2.5%, transparent),
-    color-mix(in srgb, #00b25d 2.5%, transparent),
     color-mix(in srgb, #b26000 2.5%, transparent),
     color-mix(in srgb, #b2004b 2.5%, transparent),
-    color-mix(in srgb, #4e00b2 2.5%, transparent)
+    color-mix(in srgb, #4e00b2 2.5%, transparent),
+    color-mix(in srgb, #0077b2 2.5%, transparent),
+    color-mix(in srgb, #00b25d 2.5%, transparent)
   );
   background-color: var(--bg);
   background-size: 400% 400%;
@@ -117,7 +122,7 @@ h2 {
 
 p {
   font-size: 0.9rem;
-  font-weight: 200;
+  font-weight: 400;
 }
 
 hr {
@@ -130,4 +135,32 @@ hr {
   background-color: var(--ct);
 
   opacity: 0.15;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+ul li::before {
+  content: "-";
+  color: var(--ct);
+  display: inline-block;
+  width: 1em;
+}
+
+a {
+  color: var(--ct);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.social {
+  display: flex;
+  gap: 0.5rem;
+  margin-block: 0.2rem;
 }
