@@ -29,6 +29,10 @@
   height: 16px;
 }
 
+[data-lucide]:hover {
+  transform: scale(1.1);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -78,21 +82,6 @@ main {
 
   margin-inline: 20rem;
   padding-inline: 2rem;
-
-  border-radius: 2rem;
-
-  box-shadow: inset 0 0 1rem color-mix(in srgb, transparent 15%, transparent);
-
-  background-image: radial-gradient(
-      color-mix(in srgb, var(--ct) 10%, transparent) 0.5px,
-      transparent 0.5px
-    ),
-    radial-gradient(
-      color-mix(in srgb, var(--ct) 10%, transparent) 0.5px,
-      transparent 0.5px
-    );
-  background-size: 20px 20px;
-  background-position: 0 0, 10px 10px;
 }
 
 @media (max-width: 768px) {
@@ -144,6 +133,7 @@ ul {
 ul li {
   font-size: 0.9rem;
   font-weight: 400;
+  margin-block: 0.25rem;
 }
 
 ul li::before {
@@ -155,12 +145,21 @@ ul li::before {
 
 a {
   color: var(--ct);
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 0.1px;
+  text-underline-offset: 4px;
+  text-decoration-color: color-mix(in srgb, var(--ct) 30%, transparent);
   font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--ct);
 }
 
 .social {
   display: flex;
   gap: 0.5rem;
-  margin-block: 0.2rem;
+  margin-block: 0.25rem;
 }
