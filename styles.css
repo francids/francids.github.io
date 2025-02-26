@@ -46,7 +46,8 @@
 html,
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 body {
@@ -66,6 +67,10 @@ body {
   background-size: 500% 500%;
 
   animation: gradient 15s ease infinite;
+
+  margin-block: 2rem;
+
+  overflow-y: auto;
 }
 
 main {
@@ -74,14 +79,14 @@ main {
   justify-content: center;
   align-items: start;
 
-  width: 75%;
-  max-width: 575px;
-  height: 75%;
+  width: min(75%, 575px);
 
   gap: 0.25rem;
 
   margin-inline: 20rem;
   padding-inline: 2rem;
+
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -141,6 +146,20 @@ ul li::before {
   color: var(--ct);
   display: inline-block;
   width: 1em;
+}
+
+span.tech {
+  color: color-mix(in srgb, var(--ct) 50%, transparent);
+  padding-inline: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+span.tech:hover {
+  color: color-mix(in srgb, var(--ct) 75%, transparent);
+}
+
+b {
+  font-weight: 500;
 }
 
 a {
