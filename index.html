@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/webp" href="" id="favicon" />
-    <script src="https://unpkg.com/lucide@latest"></script>
     <title>Francisco Mesa</title>
+    <link rel="icon" type="image/webp" href="" id="favicon" />
+    <link rel="stylesheet" href="styles.css" />
     <script>
       window.onload = () => {
         const randomNum = Math.floor(Math.random() * 5) + 1;
@@ -16,79 +15,127 @@
     </script>
   </head>
   <body>
+    <nav>
+      <a href="#profile" data-section="profile">Perfil</a>
+      <a href="#projects" data-section="projects">Proyectos</a>
+      <a href="#contact" data-section="contact">Contacto</a>
+    </nav>
+
     <main>
-      <img id="icon" width="50px" height="50px" />
-      <h1>Francisco Mesa</h1>
+      <section id="profile">
+        <article>
+          <img src="./img/me.webp" alt="Foto de Francisco Mesa" />
+          <h1>Francisco Mesa</h1>
 
-      <p class="social">
-        <a href="https://github.com/francids">
-          <i data-lucide="github"></i>
-        </a>
-        <a href="https://x.com/franc_ids">
-          <i data-lucide="twitter"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/francisco-mesa">
-          <i data-lucide="linkedin"></i>
-        </a>
-      </p>
+          <div class="social">
+            <a href="https://github.com/francids">
+              <i data-lucide="github"></i>
+              <span> Github </span>
+            </a>
+            <a href="https://x.com/franc_ids">
+              <i data-lucide="twitter"></i>
+              <span> Twitter </span>
+            </a>
+            <a href="https://www.linkedin.com/in/francisco-mesa">
+              <i data-lucide="linkedin"></i>
+              <span> LinkedIn </span>
+            </a>
+          </div>
 
-      <h2>Sobre mi</h2>
-      <p>
-        Soy un desarrollador de software con pasión por el aprendizaje continuo
-        y la creación de aplicaciones útiles. Mi enfoque es construir soluciones
-        intuitivas que resuelvan problemas reales.
-      </p>
+          <p>
+            Desarrollador de software enfocado en crear soluciones intuitivas
+            que resuelvan problemas reales. Apasionado por el aprendizaje
+            continuo.
+          </p>
+        </article>
+      </section>
 
-      <hr />
+      <section id="projects">
+        <article
+          id="anaquel"
+          onclick="window.open('https://github.com/francids/anaquel', '_blank')"
+        >
+          <aside>
+            <h2>Anaquel</h2>
+            <p>Aplicación de gestión de lectura.</p>
+            <span>Flutter · SQLite · Python · Appwrite</span>
+          </aside>
+          <picture>
+            <object data="./img/svg/anaquel.svg" type="image/svg+xml"></object>
+          </picture>
+        </article>
+        <article
+          id="nobase"
+          onclick="window.open('https://github.com/francids/nobase', '_blank')"
+        >
+          <aside>
+            <h2>Nobase</h2>
+            <p>Backend fácil y básico en 1 archivo.</p>
+            <span>TypeScript · Bun · Hono</span>
+          </aside>
+          <picture>
+            <object data="./img/svg/nobase.svg" type="image/svg+xml"></object>
+          </picture>
+        </article>
+        <article
+          id="productiva-mente"
+          onclick="window.open('https://francids.com/productiva-mente/', '_blank')"
+        >
+          <aside>
+            <h2>Productiva Mente</h2>
+            <p>App web para gestión de tareas y notas con Material.</p>
+            <span>Angular · TypeScript · Material</span>
+          </aside>
+          <picture>
+            <object
+              data="./img/svg/productiva-mente.svg"
+              type="image/svg+xml"
+            ></object>
+          </picture>
+        </article>
+        <article
+          id="archivos-esenciales"
+          onclick="window.open('https://archivos-esenciales.vercel.app/', '_blank')"
+        >
+          <aside>
+            <h2>Archivos Esenciales</h2>
+            <p>Convierte y optimiza tus PDF e imágenes.</p>
+            <span>.NET MAUI · Aspose</span>
+          </aside>
+          <picture>
+            <object
+              data="./img/svg/archivos-esenciales.svg"
+              type="image/svg+xml"
+            ></object>
+          </picture>
+        </article>
+        <article
+          id="the-recipes"
+          onclick="window.open('https://the-recipes.vercel.app/', '_blank')"
+        >
+          <aside>
+            <h2>The Recipes App</h2>
+            <p>Aplicación móvil para almacenar recetas de cocina</p>
+            <span>Flutter · Firebase</span>
+          </aside>
+          <picture>
+            <object
+              data="./img/svg/the-recipes.svg"
+              type="image/svg+xml"
+            ></object>
+          </picture>
+        </article>
+      </section>
 
-      <h2>Habilidades</h2>
-      <ul>
-        <li>
-          <b>Lenguajes</b>: TypeScript, JavaScript, Python, Dart, Java, C#, Go
-        </li>
-        <li>
-          <b>Marcos de trabajo</b>: Flutter, React, Angular, FastAPI, Flask,
-          .NET, Spring Boot
-        </li>
-        <li>
-          <b> Bases de datos </b>: SQLite, MySQL, MongoDB, SQL Server,
-          PostgreSQL
-        </li>
-        <li>
-          <b>Herramientas</b>: VS Code, IntelliJ, Android Studio, PyCharm,
-          Docker, Figma
-        </li>
-        <li>
-          <b>Plataformas</b>: Azure, AWS, Render, Firebase, Appwrite, GitHub,
-          Azure DevOps
-        </li>
-      </ul>
-
-      <hr />
-
-      <h2>Proyectos</h2>
-      <ul>
-        <li>
-          <a href="https://github.com/francids/anaquel">Anaquel</a>: Sistema de
-          Gestión de Lectura.
-          <span class="tech">Flutter · Python</span>
-        </li>
-        <li>
-          <a href="https://github.com/francids/productiva-mente">
-            Productiva Mente </a
-          >: Aplicación móvil de tareas y notas.
-          <span class="tech">Angular · Material</span>
-        </li>
-        <li>
-          <a href="https://github.com/francids/the_recipes">The Recipes</a>:
-          Aplicación móvil de recetas.
-          <span class="tech">Flutter · Firebase</span>
-        </li>
-      </ul>
-
-      <script>
-        lucide.createIcons();
-      </script>
+      <section id="contact">
+        <a href="mailto:francisco@francids.com"> francisco@francids.com </a>
+        <img id="icon" width="50px" height="50px" />
+      </section>
     </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
   </body>
 </html>
