@@ -10,7 +10,6 @@
       window.onload = () => {
         const randomNum = Math.floor(Math.random() * 5) + 1;
         document.getElementById("favicon").href = `img/${randomNum}.webp`;
-        document.getElementById("icon").src = `img/${randomNum}.webp`;
       };
     </script>
   </head>
@@ -51,85 +50,82 @@
       </section>
 
       <section id="projects">
-        <article
-          id="anaquel"
-          onclick="window.open('https://github.com/francids/anaquel', '_blank')"
-        >
-          <aside>
-            <h2>Anaquel</h2>
-            <p>Aplicación de gestión de lectura.</p>
-            <span>Flutter · SQLite · Python · Appwrite</span>
-          </aside>
-          <picture>
-            <object data="./img/svg/anaquel.svg" type="image/svg+xml"></object>
-          </picture>
-        </article>
-        <article
-          id="nobase"
-          onclick="window.open('https://github.com/francids/nobase', '_blank')"
-        >
-          <aside>
-            <h2>Nobase</h2>
-            <p>Backend fácil y básico en 1 archivo.</p>
-            <span>TypeScript · Bun · Hono</span>
-          </aside>
-          <picture>
-            <object data="./img/svg/nobase.svg" type="image/svg+xml"></object>
-          </picture>
-        </article>
-        <article
-          id="productiva-mente"
-          onclick="window.open('https://francids.com/productiva-mente/', '_blank')"
-        >
-          <aside>
-            <h2>Productiva Mente</h2>
-            <p>App web para gestión de tareas y notas con Material.</p>
-            <span>Angular · TypeScript · Material</span>
-          </aside>
-          <picture>
-            <object
-              data="./img/svg/productiva-mente.svg"
-              type="image/svg+xml"
-            ></object>
-          </picture>
-        </article>
-        <article
-          id="archivos-esenciales"
-          onclick="window.open('https://archivos-esenciales.vercel.app/', '_blank')"
-        >
-          <aside>
-            <h2>Archivos Esenciales</h2>
-            <p>Convierte y optimiza tus PDF e imágenes.</p>
-            <span>.NET MAUI · Aspose</span>
-          </aside>
-          <picture>
-            <object
-              data="./img/svg/archivos-esenciales.svg"
-              type="image/svg+xml"
-            ></object>
-          </picture>
-        </article>
-        <article
-          id="the-recipes"
-          onclick="window.open('https://the-recipes.vercel.app/', '_blank')"
-        >
-          <aside>
-            <h2>The Recipes App</h2>
-            <p>Aplicación móvil para almacenar recetas de cocina</p>
-            <span>Flutter · Firebase</span>
-          </aside>
-          <picture>
-            <object
-              data="./img/svg/the-recipes.svg"
-              type="image/svg+xml"
-            ></object>
-          </picture>
-        </article>
+        <a href="https://github.com/francids/anaquel" target="_blank">
+          <article id="anaquel">
+            <aside>
+              <h2>Anaquel</h2>
+              <p>Aplicación de gestión de lectura.</p>
+              <span>Flutter · SQLite · Python · Appwrite</span>
+            </aside>
+            <picture>
+              <object
+                data="./img/svg/anaquel.svg"
+                type="image/svg+xml"
+              ></object>
+            </picture>
+          </article>
+        </a>
+        <a href="https://github.com/francids/nobase" target="_blank">
+          <article id="nobase">
+            <aside>
+              <h2>Nobase</h2>
+              <p>Backend fácil y básico en 1 archivo.</p>
+              <span>TypeScript · Bun · Hono</span>
+            </aside>
+            <picture>
+              <object data="./img/svg/nobase.svg" type="image/svg+xml"></object>
+            </picture>
+          </article>
+        </a>
+        <a href="https://francids.com/productiva-mente/" target="_blank">
+          <article id="productiva-mente">
+            <aside>
+              <h2>Productiva Mente</h2>
+              <p>App web para gestión de tareas y notas con Material.</p>
+              <span>Angular · TypeScript · Material</span>
+            </aside>
+            <picture>
+              <object
+                data="./img/svg/productiva-mente.svg"
+                type="image/svg+xml"
+              ></object>
+            </picture>
+          </article>
+        </a>
+        <a href="https://archivos-esenciales.vercel.app/" target="_blank">
+          <article id="archivos-esenciales">
+            <aside>
+              <h2>Archivos Esenciales</h2>
+              <p>Convierte y optimiza tus PDF e imágenes.</p>
+              <span>.NET MAUI · Aspose</span>
+            </aside>
+            <picture>
+              <object
+                data="./img/svg/archivos-esenciales.svg"
+                type="image/svg+xml"
+              ></object>
+            </picture>
+          </article>
+        </a>
+        <a href="https://the-recipes.vercel.app/" target="_blank">
+          <article id="the-recipes">
+            <aside>
+              <h2>The Recipes App</h2>
+              <p>Aplicación móvil para almacenar recetas de cocina</p>
+              <span>Flutter · Firebase</span>
+            </aside>
+            <picture>
+              <object
+                data="./img/svg/the-recipes.svg"
+                type="image/svg+xml"
+              ></object>
+            </picture>
+          </article>
+        </a>
       </section>
 
       <section id="contact">
         <a href="mailto:francisco@francids.com"> francisco@francids.com </a>
-        <img id="icon" width="50px" height="50px" />
       </section>
     </main>
 
