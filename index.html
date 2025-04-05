@@ -6,6 +6,7 @@
     <title>Francisco Mesa</title>
     <link rel="icon" type="image/webp" href="" id="favicon" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="js/i18n.js" type="module"></script>
     <script>
       window.onload = () => {
         const randomNum = Math.floor(Math.random() * 5) + 1;
@@ -15,9 +16,15 @@
   </head>
   <body>
     <nav>
-      <a href="#profile" data-section="profile">Perfil</a>
-      <a href="#projects" data-section="projects">Proyectos</a>
-      <a href="#contact" data-section="contact">Contacto</a>
+      <a href="#profile" data-section="profile" data-i18n="nav.profile">
+        Perfil
+      </a>
+      <a href="#projects" data-section="projects" data-i18n="nav.projects">
+        Proyectos
+      </a>
+      <a href="#contact" data-section="contact" data-i18n="nav.contact">
+        Contacto
+      </a>
     </nav>
 
     <main>
@@ -29,19 +36,19 @@
           <div class="social">
             <a href="https://github.com/francids">
               <i data-lucide="github"></i>
-              <span> Github </span>
+              <span>Github</span>
             </a>
             <a href="https://x.com/franc_ids">
               <i data-lucide="twitter"></i>
-              <span> Twitter </span>
+              <span>Twitter</span>
             </a>
             <a href="https://www.linkedin.com/in/francisco-mesa">
               <i data-lucide="linkedin"></i>
-              <span> LinkedIn </span>
+              <span>LinkedIn</span>
             </a>
           </div>
 
-          <p>
+          <p data-i18n="profile.description">
             Desarrollador de software enfocado en crear soluciones intuitivas
             que resuelvan problemas reales. Apasionado por el aprendizaje
             continuo.
@@ -54,7 +61,9 @@
           <article id="anaquel">
             <aside>
               <h2>Anaquel</h2>
-              <p>Aplicación de gestión de lectura.</p>
+              <p data-i18n="projects.anaquel.description">
+                Aplicación de gestión de lectura.
+              </p>
               <span>Flutter · SQLite · Python · Appwrite</span>
             </aside>
             <picture>
@@ -69,7 +78,9 @@
           <article id="nobase">
             <aside>
               <h2>Nobase</h2>
-              <p>Backend fácil y básico en 1 archivo.</p>
+              <p data-i18n="projects.nobase.description">
+                Backend fácil y básico en 1 archivo.
+              </p>
               <span>TypeScript · Bun · Hono</span>
             </aside>
             <picture>
@@ -81,7 +92,9 @@
           <article id="productiva-mente">
             <aside>
               <h2>Productiva Mente</h2>
-              <p>App web para gestión de tareas y notas con Material.</p>
+              <p data-i18n="projects.productivaMente.description">
+                App web para gestión de tareas y notas con Material.
+              </p>
               <span>Angular · TypeScript · Material</span>
             </aside>
             <picture>
@@ -96,7 +109,9 @@
           <article id="archivos-esenciales">
             <aside>
               <h2>Archivos Esenciales</h2>
-              <p>Convierte y optimiza tus PDF e imágenes.</p>
+              <p data-i18n="projects.archivosEsenciales.description">
+                Convierte y optimiza tus PDF e imágenes.
+              </p>
               <span>.NET MAUI · Aspose</span>
             </aside>
             <picture>
@@ -111,7 +126,9 @@
           <article id="the-recipes">
             <aside>
               <h2>The Recipes App</h2>
-              <p>Aplicación móvil para almacenar recetas de cocina</p>
+              <p data-i18n="projects.theRecipes.description">
+                Aplicación móvil para almacenar recetas de cocina
+              </p>
               <span>Flutter · Firebase</span>
             </aside>
             <picture>
