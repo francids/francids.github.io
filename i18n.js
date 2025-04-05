@@ -30,8 +30,6 @@ function setLanguage(lang) {
 
   document.documentElement.lang = language;
 
-  localStorage.setItem('preferredLanguage', language);
-
   document.querySelectorAll('[data-i18n]').forEach(element => {
     const key = element.getAttribute('data-i18n');
     if (translations[language][key]) {
@@ -43,12 +41,6 @@ function setLanguage(lang) {
 }
 
 function detectBrowserLanguage() {
-  const savedLanguage = localStorage.getItem('preferredLanguage');
-  if (savedLanguage && supportedLanguages.includes(savedLanguage)) {
-    console.log(`Using saved language: ${savedLanguage}`);
-    return savedLanguage;
-  }
-
   const browserLang = navigator.language || navigator.userLanguage || 'es';
   console.log(`Detected browser language: ${browserLang}`);
 
