@@ -1,0 +1,19 @@
+---
+import { Mail } from "@lucide/astro";
+---
+
+<nav class="flex items-center justify-between py-8">
+  <a href="/">
+    <img
+      src="/me.webp"
+      alt="Profile Photo"
+      class="w-10 h-10 rounded-full object-cover select-none pointer-events-none"
+    />
+  </a>
+
+  <div class="flex space-x-6">
+    <a href="mailto:francisco@francids.com">
+      <Mail size={24} />
+    </a>
+  </div>
+</nav>

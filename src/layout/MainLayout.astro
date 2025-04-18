@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/webp" id="favicon" />
+    <script>
+      window.onload = () => {
+        const randomNum = Math.floor(Math.random() * 5) + 1;
+        (document.getElementById("favicon") as HTMLLinkElement).href =
+          `img/${randomNum}.webp`;
+      };
+    </script>
+    <title>Francisco Mesa</title>
+  </head>
+  <body
+    class="max-w-2xl flex justify-center scroll-smooth mx-auto flex-col min-h-96 bg-neutral-50 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 gap-8 sm:gap-4 px-8 py-4"
+  >
+    <Nav />
+    <main class="prose-sm prose-p:font-medium prose-h1:font-semibold">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
