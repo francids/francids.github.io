@@ -25,7 +25,9 @@ import Footer from "../components/Footer.astro";
     class="max-w-2xl flex justify-center scroll-smooth mx-auto flex-col min-h-96 bg-neutral-50 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 gap-8 sm:gap-4 px-8 py-4"
   >
     <Nav />
-    <main class="prose-sm prose-p:font-medium prose-h1:font-semibold">
+    <main
+      class="prose-sm prose-p:font-medium prose-h1:font-semibold prose-a:font-medium prose-a:transition-all prose-a:duration-200 prose-a:ease-in-out prose-a:hover:underline prose-a:hover:underline-offset-4 prose-a:hover:decoration-1"
+    >
       <slot />
     </main>
     <Footer />
